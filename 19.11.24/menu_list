@@ -1,0 +1,35 @@
+items = ["Red","Green","Blue","Yellow","Sero-Buro-Malinoviy","Black","Never Gonna Give You Up"]
+
+while True:
+    try:
+        print("\nМеню:")
+        print("1. Показать список")
+        print("2. Добавить элемент")
+        print("3. Удалить элемент")
+        print("4. Изменить элемент")
+        print("5. Выход")
+        inp = int(input("Выбери действие (1-5): "))
+        if inp == 1:
+            print(items)
+            press = input("Нажмите ENTER для продолжения...")
+        elif inp == 2:
+            inp = input("Введите то что хотите добавить: ")
+            items.append(inp)
+            press = input("Нажмите ENTER для продолжения...")
+        elif inp == 3:
+            inp = int(input("Введите индекс элемента для удаления: "))
+            items.pop(inp)
+            press = input("Нажмите ENTER для продолжения...")
+        elif inp == 4:
+            inp = int(input("Введите индекс элемента для замены: "))
+            inp2 = str(input("Введите элемент для замены: "))
+            items.insert(inp, inp2)
+            press = input("Нажмите ENTER для продолжения...")
+        elif inp == 5:
+            break
+        else:
+            print("Выберите число из списка!")
+            press = input("Нажмите ENTER для продолжения...")
+    except ValueError:
+        print("Не пытайтесь меня обмануть!")
+        press_1 = input("Нажмите ENTER тобы продолжить...")
